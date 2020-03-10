@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!--在 "app.js" 透過 "app.use(express.static(path.join(__dirname, 'public')));" 將靜態資料夾設為"public"，所以href前方以無須輸入完整路徑-->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
