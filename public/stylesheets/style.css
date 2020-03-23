@@ -1,8 +1,35 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans TC', 'Slabo 27px', sans-serif, serif;
+  text-align: left;
+  background-color: #eeeeee;
+  
 }
 
-a {
-  color: #00B7FF;
+main > .container {
+  padding: 5% 10% 0;
+}
+
+.footer {
+  background-color: #343a40;
+  width: 100%;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #cecece;
+  text-align: center;
+}
+
+code {
+  font-size: 98%;
+  font-weight: bolder;
+}
+
+article > .lead {
+  margin-top: -6px;
+}
+
+article > a {
+    color: #9e001f;
 }

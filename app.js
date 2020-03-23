@@ -38,4 +38,29 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+var settings = require('./settings');
+
+//session info are stored in db
+app.use(session({
+  secret: settings.cookieSecret, //prevent cookie from being falsified
+  key: settings.db, //cookie name
+  cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}, //cookie life: 30days
+  store: new MongoStore({ //MongoStore instance
+    db: settings.db,
+    host: settings.host,
+    port: settings.port,
+    url: settings.url
+  }),
+  resave: false,
+  saveUninitialized: true
+}));
+
+//https://github.com/jaredhanson/connect-flash
+var flash = require('connect-flash');
+app.use(flash());
+
+
+
 module.exports = app;

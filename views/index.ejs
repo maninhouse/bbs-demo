@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <!--在 "app.js" 透過 "app.use(express.static(path.join(__dirname, 'public')));" 將靜態資料夾設為"public"，所以href前方以無須輸入完整路徑-->
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+
+<%- include header %>
+
+
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5">你可以說出任何你想說的故事</h1>
+    <article>
+      <br>
+      <p class="lead">無論是你經歷的、聽說的，抑或是想像的</p>
+      <p class="lead">匿名、無人批評的故事牆</p>
+      <p class="lead">歡迎留下你的足跡</p>
+      <a href="/post"> <code>&nbsp&gt 寫下我的故事</code> </a>
+    </article>
+  </div>
+</main>        
+
+
+
+<%- include footer %>

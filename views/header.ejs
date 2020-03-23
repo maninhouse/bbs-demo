@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= title %></title>
+    <!--在 "app.js" 透過 "app.use(express.static(path.join(__dirname, 'public')));" 將靜態資料夾設為"public"，所以href前方以無須輸入完整路徑-->
+    <link href="/bootstrap-4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="/bootstrap-4.4.1/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap-4.4.1/js/bootstrap.min.js"></script>
+    <!--font type-->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Slabo+27px&display=swap" rel="stylesheet">
+    <link href='/stylesheets/style.css' rel='stylesheet' />
+    
+  </head>
+
+  <body class="d-flex flex-column h-100">
+    
+    <%- include navbar %>
+    
+
